@@ -7,6 +7,6 @@ RUN apt-get update \
       && apt-get update \
       && apt-get -y install salt-minion
 
-ADD dump-init /
-ENTRYPOINT ["/dump-init"]
+ADD dumb-init /
+ENTRYPOINT ["/dumb-init"]
 CMD ["salt-minion", "-linfo"]
